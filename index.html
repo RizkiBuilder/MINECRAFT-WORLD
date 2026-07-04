@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Dunia Minecraft</title>
+    <style>
+        /* Gaya dasar tema Minecraft */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace; /* Font kotak-kotak khas MC */
+        }
+
+        body {
+            background: linear-gradient(#87CEEB 0%, #87CEEB 60%, #5d4037 60%, #5d4037 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .kotak-utama {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #c6c6c6;
+            border: 4px solid #373737;
+            box-shadow: inset -4px -4px 0px 0px #555, inset 4px 4px 0px 0px #fff;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #4c7c2a;
+            text-align: center;
+            text-shadow: 3px 3px 0px #333;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            color: #3a5a1f;
+            margin: 20px 0 10px;
+            border-left: 5px solid #4c7c2a;
+            padding-left: 10px;
+        }
+
+        p {
+            color: #222;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Gambar gaya blok */
+        .gambar-mc {
+            display: block;
+            max-width: 80%;
+            margin: 15px auto;
+            border: 4px solid #373737;
+            box-shadow: inset -3px -3px 0px 0px #555, inset 3px 3px 0px 0px #fff;
+            image-rendering: pixelated; /* Efek piksel kasar khas MC */
+        }
+
+        /* Daftar item */
+        .daftar-item {
+            list-style: none;
+            padding-left: 10px;
+        }
+        .daftar-item li {
+            background: rgba(255,255,255,0.3);
+            margin: 8px 0;
+            padding: 8px;
+            border-left: 4px solid #4c7c2a;
+            transition: 0.2s;
+        }
+        .daftar-item li:hover {
+            transform: translateX(5px);
+            background: rgba(76,124,42,0.2);
+        }
+
+        /* Tombol gaya Minecraft */
+        .tombol {
+            display: block;
+            width: 220px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #727272;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: 3px solid #000;
+            box-shadow: inset -3px -3px 0px 0px #373737, inset 3px 3px 0px 0px #c6c6c6;
+            font-weight: bold;
+            font-size: 17px;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+        .tombol:hover {
+            background: #828282;
+            color: #ffffa0;
+        }
+        .tombol:active {
+            box-shadow: inset 3px 3px 0px 0px #373737, inset -3px -3px 0px 0px #c6c6c6;
+            transform: translateY(2px);
+        }
+
+        /* Animasi judul berkedip */
+        @keyframes kedip {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .judul-kedip {
+            animation: kedip 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kotak-utama">
+    <h1 class="judul-kedip">🌍 SELAMAT DATANG DI WEBSITE MINECRAFT SAYA 🌍</h1>
+    <p style="text-align:center;">Halaman ini dibuat khusus dengan gaya kotak blok favoritku!</p>
+    <hr style="border: 2px solid #555; margin: 15px 0;">
+
+    <h2>⛏️ Tentang Proyekku</h2>
+    <p>Aku sedang belajar bikin website sekaligus bereksperimen dengan mod, bangunan, dan skrip di Minecraft. Nanti ingin bikin halaman katalog bangunan karyaku sendiri!</p>
+
+    <h2>🏡 Bangunan Favoritku</h2>
+    <img src="https://via.placeholder.com/500x280/4c7c2a/ffffff?text=Rumah+Kayu+di+Pegunungan" alt="Rumah Minecraft" class="gambar-mc">
+
+    <h2>📦 Barang yang Sedang Aku Kumpulkan</h2>
+    <ul class="daftar-item">
+        <li>🪨 Batu Besi untuk Alat</li>
+        <li>🌲 Kayu Ek untuk Rumah</li>
+        <li>💎 Berlian untuk Baju Zirah</li>
+        <li>🍞 Roti untuk Bekal Eksplorasi</li>
+    </ul>
+</div>
+    <button class="tombol" onclick="mulaiEksplorasi()">🔍 Mulai Eksplorasi</button>
+    <a href="halaman_koleksi.html" class="tombol">📂 Lihat Koleksi Mod</a>
+    <button class="tombol" onclick="ubahMalam()">🎨 Ganti Latar Halaman malam</button>
+    <button class="tombol" onclick="ubahSiang()">🎨 Ganti Latar Halaman siang</button>
+    <a href="https://minecraft.fandom.com/id/wiki/Minecraft_Wiki" class="tombol" target="_blank">📖 Buka Wiki Minecraft</a>
+    <a href="halaman_bangunan.html" class="tombol" onclick="alert('Segera buka galeri bangunan keren!')">🏡 Galeri Bangunan</a>
+  <script>
+ // Fungsi 1: Tampilkan pesan saat diklik
+ function mulaiEksplorasi() {
+     alert("🎉 Selamat! Kamu mulai menjelajahi dunia Minecraft! Siapkan beliungmu ya!");
+ }
+ // Fungsi 3: Ubah tampilan jadi malam
+ function ubahMalam() {
+     document.body.style.background = "linear-gradient(#1a237e 0%, #1a237e 60%, #2e2e2e 60%, #2e2e2e 100%)";
+     alert("🌙 Wajah halaman berubah jadi mode MALAM!");
+ }
+ //Fungsi 4: ubah tampilan jadi siang
+ function ubahSiang() {
+     document.body.style.background = "linear-gradient(#87CEEB 0%, #87CEEB 60%, #5d4037 60%, #5d4037 100%)";
+     alert("🌙 Wajah halaman berubah jadi mode siang!");
+ }
+ </script>
+ </body>
+ </html>
+</div>
