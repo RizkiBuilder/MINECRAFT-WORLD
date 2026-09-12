@@ -7,32 +7,49 @@
     <style>
         body { font-family: monospace; text-align: center; padding: 30px; }
         h1 { color: #4c7c2a; }
-    img {
-    width: 200px; /* Atur ukuran lebar */
-    display: block;
-    margin: 10px auto; /* Tengahkan gambar */
-    border: 3px solid #373737;
-    image-rendering: pixelated;
-}
     .boxs {
         width:320px;
-        max-height:200px;
+        max-height:300px;
+        margin: 10px auto; /* Tengahkan gambar */
         background:gray;
         border-radius:10px;
         box-shadow:0 5px 5px black;
     }
+    .tombol {
+        background:gray;
+        border-radius:100px;
+        margin:10px;
+    }
+    /* Gaya tombol Download */
+ .download-btn {
+   display: inline-block;
+   background-color: gray; /* warna biru */
+   color: white; /* warna tulisan */
+   padding: 8px 16px; /* ruang di dalam kotak */
+   border: 1px solid black;
+   border-radius: 4px; /* sudut sedikit melengkung, hapus jika ingin kotak tajam */
+   text-decoration: none; /* hilangkan garis bawah */
+   font-size: 14px;
+   margin-top: 10px;
+   cursor: pointer;
+   box-shadow:2px 2px 2px black;
+ }
+ /* Efek saat disentuh/diklik */
+ .download-btn:hover {
+   background-color: #1d4ed8; /* biru lebih gelap */
+ }
 
     </style>
 </head>
 <body>
     <h1>Animasi minecraft</h1>
     <br>
-    <div class="boxs">malu malu
-        <iframe src="https://www.youtube.com/embed/cO8oVDw7faM
+    <div class="boxs">malu kalu
+<iframe src="https://www.youtube.com/embed/cO8oVDw7faM
 " allowfullscreen></iframe>
-        <a href="malu_malu.zip">DOWNLOAD TEMPLATE</a>
+        <a href="malu_malu.zip" class="download-btn">dowload</a>
     </div>
     <br>
-    <a href="index.html" class="tombol">⬅ Kembali ke Halaman Utama</a>
+    <a href="index.html">⬅ Kembali ke Halaman Utama</a>
 </body>
 </html>
